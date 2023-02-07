@@ -21,5 +21,4 @@ issue_data = {
 input_data = np.array([issue_data['summary'], issue_data['description'], issue_data['priority'], issue_data['status']])
 prediction = model.predict(input_data)
 
-# Update the Jira issue with the prediction
 jira.add_custom_field(issue, 'Prediction', prediction)
